@@ -87,7 +87,7 @@ export default function AgregVenta() {
 					Volver
 				</button>
 			</Link>
-			<div className="sm:flex sm:justify-start sm:align-start">
+			<div className="sm:flex sm:justify-start sm:align-start sm:pb-8">
 				<Menu />
 			</div>
 
