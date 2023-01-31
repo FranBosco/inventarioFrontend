@@ -150,7 +150,7 @@ export default function NavBar() {
 			</div>
 
 			<div className={menuState}>
-				<nav className="bg-slate-200 sm:mt-8  ml-4 text-blue-800 rounded-lg sm:ml-16  w-48 sm:w-3/4 sm:fixed font-bold sm:flex sm:flex-row flex flex-col sm:justify-center  ">
+				<nav className="bg-slate-200 sm:mt-8  ml-4 text-blue-800 rounded-lg sm:ml-16  w-48 sm:w-3/4  font-bold sm:flex sm:flex-row flex flex-col sm:justify-center  ">
 					<div
 						className="pt-4 ml-2 flex flex-col
 						"
