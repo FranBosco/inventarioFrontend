@@ -149,7 +149,7 @@ export default function NavBar() {
 						onClick={updateState}
 					/>
 				</div>
-				<div className="bg-slate-200  ml-4 text-blue-800 rounded-lg w-48 sm:fixed font-bold  ">
+				<div className="bg-slate-200  ml-4 text-blue-800 rounded-lg w-48  font-bold  ">
 					<nav className={menuState}>
 						<div
 							className="pt-4 ml-2 flex flex-col
