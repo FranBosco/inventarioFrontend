@@ -138,7 +138,7 @@ export default function NavBar() {
 	};
 
 	return (
-		<div className="flex flex-col sm:flex-row  ">
+		<div className="flex flex-col sm:flex-row w-full ">
 			<div className=" flex flex-col mr-4  text-black mt-4  sm:mt-4 sm:font-bold font-mono  ">
 				<h2 className=" ml-2 sm:ml-20 sm:text-xl hover:text-blue-800 mr-4">
 					Menu
@@ -150,132 +150,166 @@ export default function NavBar() {
 			</div>
 
 			<div className={menuState}>
-				<nav className="bg-slate-200 sm:mt-8  ml-4 text-blue-800 rounded-lg sm:ml-16  w-48 sm:w-3/4  font-bold sm:flex sm:flex-row flex flex-col sm:justify-center  ">
-					<div
-						className="pt-4 ml-2 flex flex-col
-						"
-					>
-						<div className="flex sm:mr-4">
-							<Link to="/aprod">Agregar Produccion</Link>
-							<div>
-								<SlQuestion
-									className="mt-1 ml-2 hover:cursor-pointer"
-									onClick={updateStateTextAp}
-								/>
+				<div className="bg-slate-200 sm:mt-8  ml-4 text-blue-800 rounded-lg sm:ml-20%  w-48 sm:w-fit   font-bold  sm:flex-row flex flex-col   ">
+					<nav className="sm:flex  ">
+						<div className="flex sm:grid sm:grid-cols-7 flex-col sm:justify-items-center ">
+							<div className="pt-4 ml-2 flex flex-col">
+								<div className="flex sm:mr-4">
+									<Link to="/aprod">Agregar Produccion</Link>
+									<div>
+										<SlQuestion
+											className="mt-1 ml-2 hover:cursor-pointer"
+											onClick={updateStateTextAp}
+										/>
+									</div>
+								</div>
+							</div>
+							{/* <div className={textStateAp}>
+							<p className="ml-2 text-black font-thin">
+								Agregar productos fabricados para sumar al stock de productos
+								terminados las unidades fabricadas y restar del stock los
+								insumos requeridos para la fabricación
+							</p>
+						</div> */}
+
+							<div className="pt-4 ml-2 flex flex-col">
+								<div className="flex sm:mr-4">
+									<Link to="/aventa">Agregar Ventas</Link>
+									<SlQuestion
+										className="mt-1 ml-2 hover:cursor-pointer"
+										onClick={updateStateTextAv}
+									/>
+								</div>
+								{/* <div className={textStateAv}>
+								<p className="ml-2 text-black font-thin">
+									Agregar productos vendidos para restar del stock de productos
+									terminados
+								</p>
+							</div> */}
+							</div>
+							<div className="pt-4 ml-2 flex flex-col">
+								<div className="flex sm:mr-4">
+									<Link to="/modif">Modificar Stocks</Link>
+									<div>
+										<SlQuestion
+											className="mt-1 ml-2 hover:cursor-pointer"
+											onClick={updateStateTextMs}
+										/>
+									</div>
+								</div>
+								{/* <div className={textStateMs}>
+								<p className="ml-2 text-black font-thin">
+									Modifique manualmente los stocks de productos e insumos
+								</p>
+							</div> */}
+							</div>
+							<div className="pt-4 ml-2 flex flex-col">
+								<div className="flex sm:mr-4">
+									<Link to="/cins">Agregar Insumo</Link>
+									<div>
+										<SlQuestion
+											className="mt-1 ml-2 hover:cursor-pointer"
+											onClick={updateStateTextAi}
+										/>
+									</div>
+								</div>
+								{/* <div className={textStateAi}>
+								<p className="ml-2 text-black font-thin">
+									Agregar un insumo nuevo que se utilce para la fabricación de
+									productos
+								</p>
+							</div> */}
+							</div>
+							<div className="pt-4 ml-2 flex flex-col">
+								<div className="flex sm:mr-4">
+									<Link to="/cprod">Agregar Producto</Link>
+
+									<div>
+										<SlQuestion
+											className="mt-1 ml-2 hover:cursor-pointer"
+											onClick={updateStateTextAgp}
+										/>
+									</div>
+								</div>
+								{/* <div className={textStateAgp}>
+								<p className="ml-2 text-black font-thin">
+									Agregar un nuevo producto detallando las características del
+									mismo
+								</p>
+							</div> */}
+							</div>
+
+							<div className="pt-4 ml-2 flex flex-col">
+								<div className="flex sm:mr-4">
+									<Link to="/insumos">Lista de Insumos</Link>
+
+									<div>
+										<SlQuestion
+											className="mt-1 ml-2 hover:cursor-pointer"
+											onClick={updateStateTextVi}
+										/>
+									</div>
+								</div>
+								{/* <div className={textStateVi}>
+								<p className="ml-2 text-black font-thin">
+									Listado de todos los insumos
+								</p>
+							</div> */}
+							</div>
+
+							<div className="pt-4 ml-2 flex flex-col pb-4">
+								<div className="flex sm:mr-4">
+									<Link to="/productos">Lista de productos</Link>
+
+									<div>
+										<SlQuestion
+											className="mt-1 ml-2 hover:cursor-pointer"
+											onClick={updateStateTextVp}
+										/>
+									</div>
+								</div>
+								{/* <div className={textStateVp}>
+								<p className="ml-2 text-black font-thin ">
+									Listado de todos los productos
+								</p>
+							</div> */}
 							</div>
 						</div>
-					</div>
-					<div className={textStateAp}>
-						<p className="ml-2 text-black font-thin">
+					</nav>
+				</div>
+				<div>
+					{textStateAp === 'visible' ? (
+						<p>
+							{' '}
 							Agregar productos fabricados para sumar al stock de productos
 							terminados las unidades fabricadas y restar del stock los insumos
 							requeridos para la fabricación
 						</p>
-					</div>
-
-					<div className="pt-4 ml-2 flex flex-col">
-						<div className="flex sm:mr-4">
-							<Link to="/aventa">Agregar Ventas</Link>
-							<SlQuestion
-								className="mt-1 ml-2 hover:cursor-pointer"
-								onClick={updateStateTextAv}
-							/>
-						</div>
-						<div className={textStateAv}>
-							<p className="ml-2 text-black font-thin">
-								Agregar productos vendidos para restar del stock de productos
-								terminados
-							</p>
-						</div>
-					</div>
-					<div className="pt-4 ml-2 flex flex-col">
-						<div className="flex sm:mr-4">
-							<Link to="/modif">Modificar Stocks</Link>
-							<div>
-								<SlQuestion
-									className="mt-1 ml-2 hover:cursor-pointer"
-									onClick={updateStateTextMs}
-								/>
-							</div>
-						</div>
-						<div className={textStateMs}>
-							<p className="ml-2 text-black font-thin">
-								Modifique manualmente los stocks de productos e insumos
-							</p>
-						</div>
-					</div>
-					<div className="pt-4 ml-2 flex flex-col">
-						<div className="flex sm:mr-4">
-							<Link to="/cins">Agregar Insumo</Link>
-							<div>
-								<SlQuestion
-									className="mt-1 ml-2 hover:cursor-pointer"
-									onClick={updateStateTextAi}
-								/>
-							</div>
-						</div>
-						<div className={textStateAi}>
-							<p className="ml-2 text-black font-thin">
-								Agregar un insumo nuevo que se utilce para la fabricación de
-								productos
-							</p>
-						</div>
-					</div>
-					<div className="pt-4 ml-2 flex flex-col">
-						<div className="flex sm:mr-4">
-							<Link to="/cprod">Agregar Producto</Link>
-
-							<div>
-								<SlQuestion
-									className="mt-1 ml-2 hover:cursor-pointer"
-									onClick={updateStateTextAgp}
-								/>
-							</div>
-						</div>
-						<div className={textStateAgp}>
-							<p className="ml-2 text-black font-thin">
-								Agregar un nuevo producto detallando las características del
-								mismo
-							</p>
-						</div>
-					</div>
-
-					<div className="pt-4 ml-2 flex flex-col">
-						<div className="flex sm:mr-4">
-							<Link to="/insumos">Lista de Insumos</Link>
-
-							<div>
-								<SlQuestion
-									className="mt-1 ml-2 hover:cursor-pointer"
-									onClick={updateStateTextVi}
-								/>
-							</div>
-						</div>
-						<div className={textStateVi}>
-							<p className="ml-2 text-black font-thin">
-								Listado de todos los insumos
-							</p>
-						</div>
-					</div>
-
-					<div className="pt-4 ml-2 flex flex-col pb-4">
-						<div className="flex sm:mr-4">
-							<Link to="/productos">Lista de productos</Link>
-
-							<div>
-								<SlQuestion
-									className="mt-1 ml-2 hover:cursor-pointer"
-									onClick={updateStateTextVp}
-								/>
-							</div>
-						</div>
-						<div className={textStateVp}>
-							<p className="ml-2 text-black font-thin ">
-								Listado de todos los productos
-							</p>
-						</div>
-					</div>
-				</nav>
+					) : textStateAv === 'visible' ? (
+						<p>
+							Agregar productos vendidos para restar del stock de productos
+							terminados
+						</p>
+					) : textStateMs === 'visible' ? (
+						<p>Modifique manualmente los stocks de productos e insumos</p>
+					) : textStateAi === 'visible' ? (
+						<p>
+							{' '}
+							Agregar un insumo nuevo que se utilce para la fabricación de
+							productos
+						</p>
+					) : textStateAgp === 'visible' ? (
+						<p>
+							Agregar un nuevo producto detallando las características del mismo
+						</p>
+					) : textStateVi === 'visible' ? (
+						<p>Listado de todos los insumos</p>
+					) : textStateVp === 'visible' ? (
+						<p>Listado de todos los productos</p>
+					) : (
+						<p></p>
+					)}
+				</div>
 			</div>
 		</div>
 	);
