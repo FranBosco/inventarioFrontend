@@ -25,7 +25,7 @@ export default function SideBar() {
 					onClick={() => setOpen(!open)}
 				/>
 			</div>
-			<div className="sm:ml-2 sm:py-4 flex sm:flex-col flex-wrap space-y-4 space-x-5 sm:space-y-6	 ">
+			<div className="sm:ml-2 sm:py-4 flex flex-col space-y-4 space-x-5 sm:space-y-6	 ">
 				<div className="flex flex-x-gap-4 items-center mt- sm:mt-6  ml-6	">
 					{open === true ? (
 						<div className="flex sm:mb-6 ">
