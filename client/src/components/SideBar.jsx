@@ -9,7 +9,7 @@ import { SiAddthis } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 
 export default function SideBar() {
-	const [open, setOpen] = useState(true);
+	const [open, setOpen] = useState(false);
 
 	return (
 		<div
