@@ -19,9 +19,7 @@ export default function ProdById() {
 					Volver
 				</button>
 			</Link>
-			<div className="sm:flex sm:justify-start sm:align-start">
-				<Menu />
-			</div>
+
 			<div>
 				<h1 className="text-2xl font-bold flex justify-center pt-10 sm:pt-0 underline sm:text-5xl">
 					{prod.name}

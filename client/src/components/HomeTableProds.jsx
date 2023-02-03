@@ -12,7 +12,7 @@ export default function HomeTableProds() {
 	}, [dispatch]);
 
 	return (
-		<table className="">
+		<table className="hover:shadow-2xl hover:shadow-black delay-75">
 			<thead>
 				<tr className="text-black border-2 border-black">
 					<th className="px-2 border-2 border-black">Producto</th>

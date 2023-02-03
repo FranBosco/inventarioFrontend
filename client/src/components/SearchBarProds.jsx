@@ -28,7 +28,7 @@ export default function SearchBarProds() {
 			<form onSubmit={(e) => handleSubmit(e)}>
 				<input
 					value={name}
-					className="border-2 border-blue-800 rounded-xl sm:w-96"
+					className="border-2 border-blue-800 rounded-xl sm:w-96 bg-transparent"
 					type="text"
 					placeholder="   Buscar Producto"
 					onChange={(e) => handleChange(e)}

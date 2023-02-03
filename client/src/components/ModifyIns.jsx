@@ -131,9 +131,7 @@ export default function ModifyIns() {
 					Volver
 				</button>
 			</Link>
-			<div className="sm:flex sm:justify-start sm:align-start">
-				<Menu />
-			</div>
+
 			<div className="flex flex-col space-x-2 justify-center sm:pb-4 ">
 				<h1 className="text-xl flex justify-center">Modificar insumo: </h1>
 				<h1 className="text-xl font-bold flex justify-center sm:text-3xl">

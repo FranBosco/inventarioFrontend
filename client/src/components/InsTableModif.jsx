@@ -89,7 +89,7 @@ export default function AllInsTable() {
 					Volver a cargar
 				</button>
 			</div>
-			<table className="table-fixed mr-2 ml-2 sm:mr-20 sm:ml-20 ">
+			<table className="table-fixed mr-2 ml-2 sm:mr-20 sm:ml-20 hover:shadow-2xl hover:shadow-black delay-75">
 				<thead>
 					<tr className="text-black border-2 border-black sm:text-xl">
 						<th className="px-2 py-2 border-4 border-black sm:px-12  ">
@@ -155,7 +155,7 @@ export default function AllInsTable() {
 								<td className="px-2 border-2 border-black">
 									<input
 										type="number"
-										className="font-bold"
+										className="font-bold bg-transparent	font-black"
 										onChange={(e) => handleChange(e)}
 										name={i.id}
 										placeholder="seleccione cantidad"
