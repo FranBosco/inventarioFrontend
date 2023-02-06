@@ -112,7 +112,7 @@ export default function AgregProduccion() {
 						Volver a cargar
 					</button>
 				</div>
-				<div className="">
+				<div className="overflow-x-auto overflow-y-auto h-96 sm:h-96">
 					<table className=" mr-2 ml-2 sm:mr-20 sm:ml-20 ">
 						<thead>
 							<tr className="text-black border-2 border-black sm:text-xl">
@@ -195,7 +195,7 @@ export default function AgregProduccion() {
 					<div className="flex justify-center pt-4">
 						<button
 							onClick={handleSubmit}
-							className="text-black font-mono border-2 rounded-xl border-blue-800 py-2 px-4 hover:bg-blue-800 hover:text-white"
+							className="text-black font-mono border-2 rounded-xl border-blue-800 py-2 px-4 hover:bg-blue-800 hover:text-white fixed"
 						>
 							Guardar
 						</button>

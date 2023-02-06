@@ -38,7 +38,7 @@ export default function ModifStock() {
 	};
 
 	return (
-		<div className="sm:flex">
+		<div className="sm:flex mb-10">
 			<div>
 				<div className={` sm:h-full bg-sky-900 border-4 border-sky-800   `}>
 					<SideBar />
@@ -60,29 +60,15 @@ export default function ModifStock() {
 				<p className="flex justify-center ml-4 mr-4 pb-4">
 					Modifique manualmente los stocks de productos e insumos
 				</p>
-				{/* 
-				<div className="flex justify-center text-black text-xl">
-					<button
-						className="border-2 border-blue-800 px-6 mr-2 hover:bg-blue-800 hover:text-white rounded-xl sm:px-20 sm:py-2"
-						onClick={updateStateProd}
-					>
-						Productos
-					</button>
-					<button
-						className="border-2 border-blue-800 px-6 mr-2 hover:bg-blue-800 hover:text-white rounded-xl sm:px-20 sm:py-2"
-						onClick={updateStateIns}
-					>
-						Insumos
-					</button>
-				</div> */}
+
 				<div className="">
-					<div className="flex sm:justify-center pt-8">
+					<div className="">
 						<ProdsTableModif />
 					</div>
 				</div>
 
 				<div className="">
-					<div className="flex sm:justify-center pt-8 pb-10">
+					<div className="">
 						<InsTableModif />
 					</div>
 				</div>
