@@ -79,13 +79,13 @@ export default function AgregVenta() {
 		dispatch(getProductos(property, order));
 	}, [dispatch, property, order]);
 	return (
-		<div className="sm:flex">
+		<div className="sm:flex mb-8">
 			<div>
-				<div className={` sm:h-screen bg-sky-900 border-4 border-sky-800  `}>
+				<div className={` sm:h-full bg-sky-900 border-4 border-sky-800  `}>
 					<SideBar />
 				</div>
 			</div>
-			<div className="max-w-full sm:ml-48	">
+			<div className="max-w-full 	">
 				<Link
 					to="/home"
 					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-8 sm:pl-8"
@@ -178,7 +178,7 @@ export default function AgregVenta() {
 									<td className="px-2 border-2 border-black">
 										<input
 											type="number"
-											className="font-bold bg-transparent"
+											className="font-bold bg-transparent placeholder-gray-600"
 											onChange={(e) => handleChange(e)}
 											name={p.id}
 											placeholder="seleccione cantidad"

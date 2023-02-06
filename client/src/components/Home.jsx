@@ -6,9 +6,9 @@ import SideBar from './SideBar';
 
 export default function Home() {
 	return (
-		<div className="sm:flex ">
+		<div className="sm:flex mb-10 ">
 			<div>
-				<div className={` sm:h-screen bg-sky-900 border-4 border-sky-800  `}>
+				<div className={` sm:h-full bg-sky-900 border-4 border-sky-800  `}>
 					<SideBar />
 				</div>
 			</div>

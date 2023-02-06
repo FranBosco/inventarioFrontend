@@ -109,21 +109,18 @@ export default function CrearInsumo() {
 	return (
 		<div className="sm:flex">
 			<div>
-				<div className={` sm:h-screen bg-sky-900 border-4 border-sky-800  `}>
+				<div className={` sm:h-full bg-sky-900 border-4 border-sky-800  `}>
 					<SideBar />
 				</div>
 			</div>
 			<div className="max-w-full sm:ml-48	">
-				<Link
-					to="/home"
-					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-8 sm:pl-8"
-				>
+				<Link to="/home" className="flex justify-start pt-2 pl-2 pb-2 sm:pt-8 ">
 					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl">
 						Volver
 					</button>
 				</Link>
 
-				<h1 className=" flex justify-center text-black text-xl font-mono font-bold pt-10 pb-10 sm:text-4xl underline">
+				<h1 className=" flex justify-center text-black text-2xl sm:text-3xl underline font-bold pb-4	 ">
 					Agregar un nuevo insumo
 				</h1>
 				<p className="flex justify-center ml-4 mr-4 pb-4 sm:pb-8">

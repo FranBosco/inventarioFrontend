@@ -10,13 +10,13 @@ import AllInsumosTable from './AllInsumosTable';
 
 export default function AllInsumos() {
 	return (
-		<div className="sm:flex">
+		<div className="sm:flex mb-10">
 			<div>
-				<div className={` sm:h-screen bg-sky-900 border-4 border-sky-800  `}>
+				<div className={` sm:h-full bg-sky-900 border-4 border-sky-800  `}>
 					<SideBar />
 				</div>
 			</div>
-			<div className="max-w-full sm:ml-48 ">
+			<div className="max-w-full ">
 				<div className="sm:flex">
 					<Link
 						to="/home"
@@ -28,7 +28,7 @@ export default function AllInsumos() {
 					</Link>
 				</div>
 
-				<h1 className=" flex justify-center text-black text-2xl font-mono font-bold pt-10 pb-8 sm:text-4xl underline text-blue-800  ">
+				<h1 className=" flex justify-center text-black text-2xl font-mono font-bold pt-10 sm:pt-0 pb-8 sm:text-4xl underline text-blue-800  ">
 					Insumos
 				</h1>
 				<p className="flex justify-center ml-4 mr-4 pb-4">

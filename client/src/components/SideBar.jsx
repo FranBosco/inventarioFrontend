@@ -14,7 +14,7 @@ export default function SideBar() {
 	return (
 		<div
 			className={`${
-				open ? 'sm:w-72 w-full sm:h-screen h-fit h-96' : 'w-full sm:w-32 '
+				open ? 'sm:w-72 w-full sm:h-full h-fit h-96' : 'w-full sm:w-32 '
 			} duration-300`}
 		>
 			<div className="flex justify-end sm:justify-end  pr-1 sm:pt-4">

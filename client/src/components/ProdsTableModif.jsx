@@ -153,7 +153,7 @@ export default function AllInsTable() {
 								<td className="px-2 border-2 border-black">
 									<input
 										type="number"
-										className="font-bold bg-transparent"
+										className="font-bold bg-transparent placeholder-gray-600"
 										onChange={(e) => handleChange(e)}
 										name={p.id}
 										placeholder="seleccione cantidad"

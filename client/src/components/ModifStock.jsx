@@ -40,11 +40,11 @@ export default function ModifStock() {
 	return (
 		<div className="sm:flex">
 			<div>
-				<div className={` sm:h-screen bg-sky-900 border-4 border-sky-800   `}>
+				<div className={` sm:h-full bg-sky-900 border-4 border-sky-800   `}>
 					<SideBar />
 				</div>
 			</div>
-			<div className=" max-w-full sm:ml-48 ">
+			<div className=" max-w-full  ">
 				<Link
 					to="/home"
 					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-8 sm:pl-8 "

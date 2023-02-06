@@ -7,8 +7,6 @@ import { FaArrowUp } from 'react-icons/fa';
 import SearchBarProds from './SearchBarProds';
 import SideBar from './SideBar';
 
-import Menu from './Menu';
-
 export default function AgregProduccion() {
 	const prods = useSelector((state) => state.allProductos);
 	const dispatch = useDispatch();
@@ -81,13 +79,13 @@ export default function AgregProduccion() {
 		dispatch(getProductos(property, order));
 	}, [dispatch, property, order]);
 	return (
-		<div className="sm:flex ">
+		<div className="sm:flex mb-10">
 			<div>
-				<div className={` sm:h-screen bg-sky-900 border-4 border-sky-800  `}>
+				<div className={` sm:h-full bg-sky-900 border-4 border-sky-800  `}>
 					<SideBar />
 				</div>
 			</div>
-			<div className="max-w-full sm:ml-48">
+			<div className="max-w-full ">
 				<Link
 					to="/home"
 					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-8 sm:pl-8"
@@ -114,8 +112,8 @@ export default function AgregProduccion() {
 						Volver a cargar
 					</button>
 				</div>
-				<div className="max-w-full">
-					<table className="table-fixed mr-2 ml-2 sm:mr-20 sm:ml-20 ">
+				<div className="">
+					<table className=" mr-2 ml-2 sm:mr-20 sm:ml-20 ">
 						<thead>
 							<tr className="text-black border-2 border-black sm:text-xl">
 								<th className="px-2 py-2 border-4 border-black sm:px-12  ">
@@ -183,7 +181,7 @@ export default function AgregProduccion() {
 										<td className="px-2 border-2 border-black">
 											<input
 												type="number"
-												className="font-bold bg-transparent"
+												className="font-bold   bg-transparent placeholder-gray-600"
 												onChange={(e) => handleChange(e)}
 												name={p.id}
 												placeholder="seleccione cantidad"
