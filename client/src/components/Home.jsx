@@ -3,6 +3,7 @@ import Menu from './Menu';
 import HomeTableInsumos from './HomeTableInsumos';
 import HomeTableProds from './HomeTableProds';
 import SideBar from './SideBar';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
 	return (
@@ -25,7 +26,9 @@ export default function Home() {
 							<h1 className="font-bold font-mono sm:text-xl text-blue-800 text-xl">
 								Insumos
 							</h1>
-							<HomeTableInsumos />
+							<Link to="/insumos">
+								<HomeTableInsumos />
+							</Link>
 						</div>
 					</div>
 					<div className="pr-8">
@@ -33,7 +36,9 @@ export default function Home() {
 							<h1 className="font-bold font-mono sm:text-xl text-blue-800 text-xl ">
 								Productos
 							</h1>
-							<HomeTableProds />
+							<Link to="/productos">
+								<HomeTableProds />
+							</Link>
 						</div>
 					</div>
 				</div>
