@@ -81,11 +81,13 @@ export default function AgregVenta() {
 	return (
 		<div className="sm:flex mb-8">
 			<div>
-				<div className={` sm:h-full bg-sky-900 border-4 border-sky-800  `}>
+				<div
+					className={` sm:h-full bg-sky-900/75 border-4 border-sky-800 sm:fixed   `}
+				>
 					<SideBar />
 				</div>
 			</div>
-			<div className="max-w-full 	">
+			<div className="max-w-full 	sm:ml-36">
 				<Link
 					to="/home"
 					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-8 sm:pl-8"

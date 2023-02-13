@@ -8,11 +8,13 @@ export default function Allproductos() {
 	return (
 		<div className="sm:flex">
 			<div>
-				<div className={` sm:h-full bg-sky-900 border-4 border-sky-800  `}>
+				<div
+					className={` sm:h-full bg-sky-900/75 border-4 border-sky-800 sm:fixed   `}
+				>
 					<SideBar className="" />
 				</div>
 			</div>
-			<div className="max-w-full ">
+			<div className="max-w-full sm:ml-48 ">
 				<div className="sm:flex">
 					<Link
 						to="/home"

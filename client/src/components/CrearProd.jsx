@@ -156,11 +156,13 @@ export default function CrearProd() {
 	return (
 		<div className="sm:flex">
 			<div>
-				<div className={` sm:h-full bg-sky-900 border-4 border-sky-800  `}>
+				<div
+					className={` sm:h-full bg-sky-900/75 border-4 border-sky-800 sm:fixed   `}
+				>
 					<SideBar />
 				</div>
 			</div>
-			<div className="max-w-full sm:ml-48">
+			<div className="max-w-full sm:ml-72">
 				<Link to="/home" className="flex justify-start pt-2 pl-2 pb-2 sm:pt-8 ">
 					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl">
 						Volver

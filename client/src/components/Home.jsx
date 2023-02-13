@@ -8,11 +8,13 @@ export default function Home() {
 	return (
 		<div className="sm:flex mb-10 ">
 			<div>
-				<div className={` sm:h-full bg-sky-900 border-4 border-sky-800  `}>
+				<div
+					className={` sm:h-full bg-sky-900/75 border-4 border-sky-800 sm:fixed   `}
+				>
 					<SideBar />
 				</div>
 			</div>
-			<div className="max-w-full sm:ml-48	  ">
+			<div className="max-w-full  sm:ml-96	  ">
 				<h1 className="text-black text-xl font-bold pt-4 sm:flex sm:justify-center sm:text-6xl sm:font-bold  sm:pt-10 underline">
 					{' '}
 					Gestor de inventarios
