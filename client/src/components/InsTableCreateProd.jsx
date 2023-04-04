@@ -27,7 +27,7 @@ export default function AllProdsTable() {
 	}, [dispatch, property, order]);
 	return (
 		<div className="flex flex-col justify-center">
-			<table className="table-fixed mr-2 ml-2 sm:mr-20 sm:ml-20 hover:shadow-2xl hover:shadow-black delay-75 ">
+			<table className="table-fixed mr-2 ml-2 sm:mr-20 sm:ml-20 hover:shadow-2xl hover:shadow-black delay-75  bg-slate-300">
 				<thead>
 					<tr className="text-black border-2 border-black sm:text-xl">
 						<th className="px-2 py-2 border-4 border-black sm:px-12  ">

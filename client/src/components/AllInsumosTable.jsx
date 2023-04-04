@@ -56,7 +56,7 @@ export default function AllProdsTable() {
 		dispatch(getInsumos(property, order));
 	}, [dispatch, property, order]);
 	return (
-		<div className="flex flex-col justify-center">
+		<div className="flex flex-col ">
 			<div className="sm:flex sm:flex-col sm:justify-center pl-2 pt-2 pb-2 sm:pl-20 ">
 				<SearchBarInsumos className="" />
 				<button
@@ -66,8 +66,8 @@ export default function AllProdsTable() {
 					Volver a cargar
 				</button>
 			</div>
-			<div className="overflow-x-auto overflow-y-auto h-96 sm:h-96">
-				<table className="table-fixed mr-2 ml-2 sm:mr-20 sm:ml-20 hover:shadow-2xl hover:shadow-black delay-75">
+			<div className="overflow-x-auto overflow-y-auto h-96 sm:h-96 sm:flex sm:flex-col">
+				<table className="table-fixed mr-2 ml-2 sm:mr-20 sm:ml-20 hover:shadow-2xl hover:shadow-black delay-75  bg-slate-300">
 					<thead>
 						<tr className="text-black border-2 border-black sm:text-xl">
 							<th className="px-2 py-2 border-4 border-black sm:px-12  ">

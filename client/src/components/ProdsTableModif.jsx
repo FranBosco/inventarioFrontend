@@ -89,7 +89,7 @@ export default function AllInsTable() {
 					</button>
 				</div>
 				<div className="overflow-x-auto overflow-y-auto h-96 sm:h-96">
-					<table className="table-fixed mr-2 ml-2 sm:mr-20 sm:ml-20 hover:shadow-2xl hover:shadow-black delay-75">
+					<table className=" mr-2 ml-2 sm:mr-20 sm:ml-20 hover:shadow-2xl hover:shadow-black delay-75 sm:w-[60vw]  bg-slate-300">
 						<thead>
 							<tr className="text-black border-2 border-black sm:text-xl">
 								<th className="px-2 py-2 border-4 border-black sm:px-12  ">

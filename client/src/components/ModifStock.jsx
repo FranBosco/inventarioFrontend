@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Menu from './Menu';
 import ProdsTableModif from './ProdsTableModif';
 import InsTableModif from './InsTableModif';
-import SideBar from './SideBar';
+import '../styles.css';
 
 export default function ModifStock() {
 	const [BtnClicked, setBtnClicked] = useState('unclicked');
@@ -38,38 +38,35 @@ export default function ModifStock() {
 	};
 
 	return (
-		<div className="sm:flex mb-10">
+		<div>
 			<div>
-				<div
-					className={` sm:h-full bg-sky-900/75 border-4 border-sky-800 sm:fixed   `}
-				>
-					<SideBar />
-				</div>
+				<Menu />
 			</div>
-			<div className=" max-w-full sm:ml-36  ">
+
+			<div className=" max-w-full ">
 				<Link
 					to="/home"
-					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-8 sm:pl-8 "
+					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-10 sm:pl-8 "
 				>
-					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl">
+					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8 ">
 						Volver
 					</button>
 				</Link>
 
-				<h1 className=" flex justify-center text-black text-2xl sm:text-3xl underline font-bold pb-4 sm:-mt-8">
+				<h1 className=" flex justify-center text-black text-2xl sm:text-3xl underline font-bold pb-4 title">
 					Modificar Stock
 				</h1>
 				<p className="flex justify-center ml-4 mr-4 pb-4">
 					Modifique manualmente los stocks de productos e insumos
 				</p>
 
-				<div className="">
+				<div className="sm:flex sm:justify-center">
 					<div className="">
 						<ProdsTableModif />
 					</div>
 				</div>
 
-				<div className="">
+				<div className="sm:flex sm:justify-center">
 					<div className="">
 						<InsTableModif />
 					</div>

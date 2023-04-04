@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { createInsumo } from '../redux/actions';
 import { Link } from 'react-router-dom';
 import Menu from './Menu';
-import SideBar from './SideBar';
+import '../styles.css';
 
 export default function CrearInsumo() {
 	const dispatch = useDispatch();
@@ -107,22 +107,22 @@ export default function CrearInsumo() {
 	//-----------------------------------------------------------------------------------------------------------------
 
 	return (
-		<div className="sm:flex">
+		<div>
 			<div>
-				<div
-					className={` sm:h-full bg-sky-900/75 border-4 border-sky-800 sm:fixed   `}
-				>
-					<SideBar />
-				</div>
+				<Menu />
 			</div>
-			<div className="max-w-full sm:ml-72	">
-				<Link to="/home" className="flex justify-start pt-2 pl-2 pb-2 sm:pt-8 ">
-					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl">
+
+			<div className="max-w-full	">
+				<Link
+					to="/home"
+					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-10 "
+				>
+					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8">
 						Volver
 					</button>
 				</Link>
 
-				<h1 className=" flex justify-center text-black text-2xl sm:text-3xl underline font-bold pb-4	 ">
+				<h1 className=" flex justify-center text-black text-2xl sm:text-3xl underline font-bold pb-4 title	 ">
 					Agregar un nuevo insumo
 				</h1>
 				<p className="flex justify-center ml-4 mr-4 pb-4 sm:pb-8">
@@ -130,7 +130,7 @@ export default function CrearInsumo() {
 				</p>
 				<div className="flex justify-center">
 					<form className="flex flex-col">
-						<div className="flex flex-col sm:text-xl sm:font-bold ">
+						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label className="">Nombre del insumo: </label>
 							<input
 								className="border-2 border-blue-800 rounded-xl"
@@ -141,7 +141,7 @@ export default function CrearInsumo() {
 								onChange={handleChange}
 							/>
 						</div>
-						<div className="flex flex-col sm:text-xl sm:font-bold ">
+						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Stock inicial:</label>
 							<input
 								className="border-2 border-blue-800 rounded-xl"
@@ -152,7 +152,7 @@ export default function CrearInsumo() {
 								onChange={handleChange}
 							/>
 						</div>
-						<div className="flex flex-col sm:text-xl sm:font-bold ">
+						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Detalles del insumo:</label>
 							<input
 								className="border-2 border-blue-800 rounded-xl"
@@ -163,7 +163,7 @@ export default function CrearInsumo() {
 								onChange={handleChange}
 							/>
 						</div>
-						<div className="flex flex-col sm:text-xl sm:font-bold ">
+						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Unidad de medida (cm,lt,kg, etc.):</label>
 							<input
 								className="border-2 border-blue-800 rounded-xl"
@@ -174,7 +174,7 @@ export default function CrearInsumo() {
 								onChange={handleChange}
 							/>
 						</div>
-						<div className="flex flex-col sm:text-xl sm:font-bold">
+						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Stock minimo deseado:</label>
 							<input
 								className="border-2 border-blue-800 rounded-xl"
@@ -185,7 +185,7 @@ export default function CrearInsumo() {
 								onChange={handleChange}
 							/>
 						</div>
-						<div className="flex flex-col sm:text-xl sm:font-bold">
+						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Imagen del Insumo:</label>
 
 							<input

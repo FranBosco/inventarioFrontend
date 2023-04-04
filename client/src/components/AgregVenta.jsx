@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FaArrowDown } from 'react-icons/fa';
 import { FaArrowUp } from 'react-icons/fa';
 import SearchBarProds from './SearchBarProds';
-import SideBar from './SideBar';
+import '../styles.css';
 
 import Menu from './Menu';
 
@@ -79,25 +79,22 @@ export default function AgregVenta() {
 		dispatch(getProductos(property, order));
 	}, [dispatch, property, order]);
 	return (
-		<div className="sm:flex mb-8">
+		<div>
 			<div>
-				<div
-					className={` sm:h-full bg-sky-900/75 border-4 border-sky-800 sm:fixed   `}
-				>
-					<SideBar />
-				</div>
+				<Menu />
 			</div>
-			<div className="max-w-full 	sm:ml-36">
+
+			<div className="max-w-full 	">
 				<Link
 					to="/home"
-					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-8 sm:pl-8"
+					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-10 sm:pl-8"
 				>
-					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl">
+					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8">
 						Volver
 					</button>
 				</Link>
 
-				<h1 className="flex justify-center text-black text-2xl sm:text-3xl underline font-bold pb-4	 ">
+				<h1 className="flex justify-center text-black text-2xl sm:text-3xl underline font-bold pb-4	title ">
 					Agregar Ventas
 				</h1>
 				<p className="flex justify-center ml-4 mr-4 sm:pb-4">
@@ -112,8 +109,8 @@ export default function AgregVenta() {
 						Volver a cargar
 					</button>
 				</div>
-				<div className="overflow-x-auto overflow-y-auto h-96 sm:h-96">
-					<table className="table-fixed mr-2 ml-2 sm:mr-20 sm:ml-20 ">
+				<div className="overflow-x-auto overflow-y-auto h-96 sm:h-96 sm:flex sm:flex-col">
+					<table className="mr-2 ml-2 sm:mr-20 sm:ml-20  bg-slate-300">
 						<thead>
 							<tr className="text-black border-2 border-black sm:text-xl">
 								<th className="px-2 py-2 border-4 border-black sm:px-12  ">

@@ -13,6 +13,7 @@ import IdProduct from './components/IdProduct';
 import IdInsumo from './components/IdInsumo';
 import ModifyIns from './components/ModifyIns';
 import ModifyProd from './components/ModifyProd';
+import Menu from './components/Menu';
 
 function App() {
 	return (

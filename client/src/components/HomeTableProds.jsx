@@ -13,7 +13,7 @@ export default function HomeTableProds() {
 
 	return (
 		<div className="sm:w-max">
-			<table className="hover:shadow-2xl hover:shadow-black delay-75">
+			<table className="hover:shadow-2xl hover:shadow-black delay-75 sm:w-[60vw]  bg-slate-300">
 				<thead>
 					<tr className="text-black border-2 border-black">
 						<th className="px-2 border-2 border-black sm:w-56">Producto</th>

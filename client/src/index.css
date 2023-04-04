@@ -12,12 +12,12 @@ body {
 		rgba(125, 11, 23, 1) 0%,
 		rgba(0, 0, 0, 1) 100%
 	); */
-	background: radial-gradient(
+	/* background: radial-gradient(
 		circle,
 		rgb(238, 235, 235) 0%,
 		rgb(110, 158, 180) 100%
-	);
-	background-color: aliceblue;
+	); */
+	background-color: rgb(202, 202, 202);
 }
 
 code {
