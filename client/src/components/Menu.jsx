@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import logo from '../pyd.png';
+
+import { FaUserAlt } from 'react-icons/fa';
 
 export default function NavBar() {
 	const [navbar, setNavbar] = useState(false);
 
 	return (
 		<nav className="w-full  bg-cyan-900 shadow-xl shadow-gray-900 fixed z-50  opacity-90 text-white">
-			<div className="sm:flex sm:justify-center px-4 mx-auto lg:max-w-full md:items-center md:flex sm:mb-4 ">
+			<div className="sm:flex sm:justify-center px-4 mx-auto lg:max-w-full md:items-center md:flex sm:mb-4 sm:mt-2 ">
 				<div>
 					<div className="flex justify-start sm:items-center  sm:justify-around py-3 md:py-5 md:block">
 						<div className="md:hidden ">
@@ -74,6 +75,19 @@ export default function NavBar() {
 							</li>
 							<li className=" hover:text-blue-600 sm:hover:scale-125">
 								<a href="/productos">Productos</a>
+							</li>
+							<li>
+								<div className="flex justify-end sm:ml-10 border-2 py-1 px-1 border-white rounded-full">
+									<FaUserAlt className="text-2xl border-1 border-white rounded-full" />
+								</div>
+							</li>
+							<li>
+								<h2 className="text-xl ">Bienvenido</h2>
+							</li>
+							<li>
+								<button className="border-2 border-red-600 py-1 px-1 rounded-md hover:bg-red-600 ">
+									Salir
+								</button>
 							</li>
 						</ul>
 					</div>

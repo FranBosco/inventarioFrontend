@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProductos } from '../redux/actions';
+import { getProductos, deleteProducto } from '../redux/actions';
 import { RiEdit2Line } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import SearchBarProds from './SearchBarProds';
 import { FaArrowDown } from 'react-icons/fa';
 import { FaArrowUp } from 'react-icons/fa';
+import { RiDeleteBin5Line } from 'react-icons/ri';
 
 export default function AllProdsTable() {
 	const productos = useSelector((state) => state.allProductos);
 	const dispatch = useDispatch();
-
+	const handleDelete = (e) => {
+		alert('Se ha eliminado el producto');
+		dispatch(deleteProducto(e.target.value));
+		window.location.reload();
+	};
 	const [property, setProperty] = useState('name');
 	const [order, setOrder] = useState('ASC');
 	function handleRefresh() {
@@ -61,7 +66,7 @@ export default function AllProdsTable() {
 				<SearchBarProds className="" />
 				<button
 					onClick={handleRefresh}
-					className=" border-2 border-blue-800 mt-2 rounded-xl hover:bg-blue-800 hover:text-white sm:w-48 	"
+					className=" border-2 border-cyan-900 mt-2 rounded-xl hover:bg-cyan-900 hover:text-white sm:w-48 	"
 				>
 					Volver a cargar
 				</button>
@@ -131,13 +136,16 @@ export default function AllProdsTable() {
 										</td>
 									)}
 
-									<td className="px-2 border-2 border-black">
-										<Link
-											to={`/producto/${p.id}`}
-											className="flex justify-center"
-										>
-											<RiEdit2Line />
-										</Link>
+									<td className="px-2  flex justify-center">
+										<div>
+											<Link
+												to={`/producto/${p.id}`}
+												className="flex justify-center"
+											>
+												<RiEdit2Line />
+												<RiDeleteBin5Line className="text-red-800 font-bold ml-3" />
+											</Link>
+										</div>
 									</td>
 								</tr>
 							);

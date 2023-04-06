@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getInsumos } from '../redux/actions';
+import { getInsumos, deleteInsumo } from '../redux/actions';
 import { RiEdit2Line } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { FaArrowDown } from 'react-icons/fa';
 import { FaArrowUp } from 'react-icons/fa';
 import SearchBarInsumos from './SearchBarInsumos';
+import { RiDeleteBin5Line } from 'react-icons/ri';
 
 export default function AllProdsTable() {
 	const insumos = useSelector((state) => state.allInsumos);
@@ -61,7 +62,7 @@ export default function AllProdsTable() {
 				<SearchBarInsumos className="" />
 				<button
 					onClick={handleRefresh}
-					className=" border-2 border-blue-800 mt-2 rounded-xl hover:bg-blue-800 hover:text-white sm:w-48 	"
+					className=" border-2 border-cyan-900 mt-2 rounded-xl hover:bg-cyan-900 hover:text-white sm:w-48 	"
 				>
 					Volver a cargar
 				</button>
@@ -130,13 +131,16 @@ export default function AllProdsTable() {
 										</td>
 									)}
 
-									<td className="px-2 border-2 border-black">
-										<Link
-											to={`/insumo/${i.id}`}
-											className="flex justify-center"
-										>
-											<RiEdit2Line />
-										</Link>
+									<td className="px-2  flex justify-center">
+										<div>
+											<Link
+												to={`/insumo/${i.id}`}
+												className="flex justify-center"
+											>
+												<RiEdit2Line />
+												<RiDeleteBin5Line className="text-red-800 font-bold ml-3" />
+											</Link>
+										</div>
 									</td>
 								</tr>
 							);

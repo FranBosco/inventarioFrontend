@@ -48,7 +48,7 @@ export default function ModifStock() {
 					to="/home"
 					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-10 sm:pl-8 "
 				>
-					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8 ">
+					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-cyan-900 rounded-lg hover:bg-cyan-900 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8 ">
 						Volver
 					</button>
 				</Link>

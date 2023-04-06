@@ -1,12 +1,18 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProdsHome } from '../redux/actions';
+import { getProdsHome, deleteProducto } from '../redux/actions';
 import { Link } from 'react-router-dom';
 import { RiEdit2Line } from 'react-icons/ri';
+import { RiDeleteBin5Line } from 'react-icons/ri';
 
 export default function HomeTableProds() {
 	const homeProducts = useSelector((state) => state.prodsHome);
 	const dispatch = useDispatch();
+	const handleDelete = (e) => {
+		alert('Se ha eliminado el producto');
+		dispatch(deleteProducto(e.target.value));
+		window.location.reload();
+	};
 	useEffect(() => {
 		dispatch(getProdsHome());
 	}, [dispatch]);
@@ -39,14 +45,16 @@ export default function HomeTableProds() {
 										{p.stock - p.min}
 									</td>
 								)}
-
-								<td className="px-2 border-2 border-black">
-									<Link
-										to={`/producto/${p.id}`}
-										className="flex justify-center"
-									>
-										<RiEdit2Line />
-									</Link>
+								<td className="px-2  flex justify-center">
+									<div>
+										<Link
+											to={`/producto/${p.id}`}
+											className="flex justify-center"
+										>
+											<RiEdit2Line />
+											<RiDeleteBin5Line className="text-red-800 font-bold ml-3" />
+										</Link>
+									</div>
 								</td>
 							</tr>
 						);

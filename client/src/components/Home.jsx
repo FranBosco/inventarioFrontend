@@ -21,24 +21,21 @@ export default function Home() {
 				<div className=" ">
 					<div className="pr-8">
 						<div className="flex flex-col pt-10 pl-2 sm:pt-10   ">
-							<h1 className="font-bold font-mono sm:text-2xl text-blue-800 text-xl">
+							<h1 className="font-bold font-mono sm:text-2xl text-cyan-900 text-xl">
 								Insumos
 							</h1>
 							<div className="">
-								<Link to="/insumos">
-									<HomeTableInsumos />
-								</Link>
+								<HomeTableInsumos />
 							</div>
 						</div>
 					</div>
 					<div className="pr-8">
 						<div className="flex flex-col pt-10 pl-2  sm:pt-10  ">
-							<h1 className="font-bold font-mono sm:text-2xl text-blue-800 text-xl  ">
+							<h1 className="font-bold font-mono sm:text-2xl text-cyan-900 text-xl  ">
 								Productos
 							</h1>
-							<Link to="/productos">
-								<HomeTableProds />
-							</Link>
+
+							<HomeTableProds />
 						</div>
 					</div>
 				</div>
