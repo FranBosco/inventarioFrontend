@@ -15,8 +15,11 @@ export const ADD_STOCK_INSUMOS = 'ADD_STOCK_INSUMOS';
 export const ADD_VENTA = 'ADD_VENTA';
 export const ADD_STOCK_PRODUCTOS = 'ADD_STOCK_PRODUCTOS';
 export const ADD_PRODUCCION = 'ADD_PRODUCCION';
+export const DELETE_INSUMO = 'DELETE_INSUMO';
+export const DELETE_PRODUCTO = 'DELETE_PRODUCTO';
 
-//Traer todos los insumos
+//Traer todos los insumos--- - https://inventariobackend-production-3ab0.up.railway.app
+//Traer todos los insumos--- -
 export function getInsumos(property, order) {
 	try {
 		return async function (dispatch) {
@@ -289,4 +292,33 @@ export function addProduccion(payload) {
 			});
 		};
 	} catch (error) {}
+}
+
+//Eliminar un insumo
+export function deleteInsumo(id) {
+	return async (dispatch) => {
+		try {
+			const info = await axios.delete(`http://localhost:3001/insumos/${id}`);
+			dispatch({
+				type: DELETE_INSUMO,
+				payload: info.data
+			});
+		} catch (error) {
+			console.log(error);
+		}
+	};
+}
+//Eliminar un producto
+export function deleteProducto(id) {
+	return async (dispatch) => {
+		try {
+			const info = await axios.delete(`http://localhost:3001/productos/${id}`);
+			dispatch({
+				type: DELETE_PRODUCTO,
+				payload: info.data
+			});
+		} catch (error) {
+			console.log(error);
+		}
+	};
 }

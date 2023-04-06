@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getInsumos } from '../redux/actions';
 import { createProd } from '../redux/actions';
 import { Link } from 'react-router-dom';
+import '../styles.css';
 import Menu from './Menu';
 
 export default function CrearProd() {
@@ -153,166 +154,171 @@ export default function CrearProd() {
 	//-----------------------------------------------------------------------------------------------------------------
 
 	return (
-		<div className="">
-			<Link
-				to="/home"
-				className="flex justify-start pt-2 pl-2 pb-2 sm:pt-8 sm:pl-8"
-			>
-				<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl">
-					Volver
-				</button>
-			</Link>
-			<div className="sm:flex sm:justify-start sm:align-start">
+		<div>
+			<div>
 				<Menu />
 			</div>
-			<h1 className=" flex justify-center text-black text-xl font-mono font-bold pt-10 pb-10 sm:text-4xl underline">
-				Agregar un nuevo producto
-			</h1>
-			<p className="flex justify-center ml-4 mr-4 pb-4 sm:pb-8">
-				Agregar un nuevo producto detallando las características del mismo
-			</p>
-			<div className="flex justify-center">
-				<form className="flex flex-col">
-					<div className="flex flex-col sm:text-xl sm:font-bold ">
-						<label className="">Nombre del producto: </label>
-						<input
-							className="border-2 border-blue-800 rounded-xl"
-							type="text"
-							name="name"
-							id=""
-							value={input.name}
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="flex flex-col sm:text-xl sm:font-bold ">
-						<label>Stock inicial:</label>
-						<input
-							className="border-2 border-blue-800 rounded-xl"
-							type="number"
-							name="stock"
-							id=""
-							value={input.stock}
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="flex flex-col sm:text-xl sm:font-bold ">
-						<label>Detalles del producto:</label>
-						<input
-							className="border-2 border-blue-800 rounded-xl"
-							type="text"
-							name="details"
-							id=""
-							value={input.details}
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="flex flex-col sm:text-xl sm:font-bold">
-						<label>Stock minimo deseado:</label>
-						<input
-							className="border-2 border-blue-800 rounded-xl"
-							type="number"
-							name="min"
-							id=""
-							value={input.min}
-							onChange={handleChange}
-						/>
-					</div>
 
-					<div className="flex flex-col sm:text-xl sm:font-bold">
-						<label>Insumos utilizados:</label>
-						<select
-							className="border-2 border-blue-800 rounded-xl"
-							onChange={handleSelect}
-							value={valueIns}
-						>
-							<option value="">Seleccione un insumo</option>
-							{allInsumos?.map((i) => (
-								<option value={i.name} key={i.id}>
-									{i.name}
-								</option>
-							))}
-						</select>
+			<div className="max-w-full  ">
+				<Link
+					to="/home"
+					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-10 "
+				>
+					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-cyan-900 rounded-lg hover:bg-cyan-900 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8">
+						Volver
+					</button>
+				</Link>
 
-						<div className="flex flex-row sm:flex-row py-2	">
-							<span value={valueCant}>
-								<div className="flex sm:pt-4 rounded-xl">
-									<input
-										onChange={(e) => handleChangeCant(e)}
-										type="number"
-										placeholder="seleccione cantidad"
-										value={valueCant}
-									/>
-									<div className="py-2 pl-4">
-										{valueIns !== '' ? (
-											<button
-												onClick={(e) => handleSubCant(e)}
-												className="border-2 border-blue-800 rounded-xl px-1 "
-											>
-												Cargar insumo
-											</button>
-										) : (
-											<p></p>
-										)}
+				<h1 className=" flex justify-center text-black text-2xl sm:text-3xl underline font-bold pb-4 title">
+					Agregar un nuevo producto
+				</h1>
+				<p className="flex justify-center ml-4 mr-4 pb-4 sm:pb-8">
+					Agregar un nuevo producto detallando las características del mismo
+				</p>
+				<div className="flex justify-center ">
+					<form className="flex flex-col">
+						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
+							<label className="">Nombre del producto: </label>
+							<input
+								className="border-2 border-cyan-900 rounded-xl "
+								type="text"
+								name="name"
+								id=""
+								value={input.name}
+								onChange={handleChange}
+							/>
+						</div>
+						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
+							<label>Stock inicial:</label>
+							<input
+								className="border-2 border-cyan-900 rounded-xl"
+								type="number"
+								name="stock"
+								id=""
+								value={input.stock}
+								onChange={handleChange}
+							/>
+						</div>
+						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
+							<label>Detalles del producto:</label>
+							<input
+								className="border-2 border-cyan-900 rounded-xl"
+								type="text"
+								name="details"
+								id=""
+								value={input.details}
+								onChange={handleChange}
+							/>
+						</div>
+						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
+							<label>Stock minimo deseado:</label>
+							<input
+								className="border-2 border-cyan-900 rounded-xl"
+								type="number"
+								name="min"
+								id=""
+								value={input.min}
+								onChange={handleChange}
+							/>
+						</div>
+
+						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
+							<label>Insumos utilizados:</label>
+							<select
+								className="border-2 border-cyan-900 rounded-xl"
+								onChange={handleSelect}
+								value={valueIns}
+							>
+								<option value="">Seleccione un insumo</option>
+								{allInsumos?.map((i) => (
+									<option value={i.name} key={i.id}>
+										{i.name}
+									</option>
+								))}
+							</select>
+
+							<div className="flex flex-row sm:flex-row py-2	w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
+								<span value={valueCant}>
+									<div className="flex sm:pt-4 rounded-xl">
+										<input
+											onChange={(e) => handleChangeCant(e)}
+											type="number"
+											placeholder="seleccione cantidad"
+											value={valueCant}
+											className="rounded-xl"
+										/>
+										<div className="py-2 pl-4">
+											{valueIns !== '' ? (
+												<button
+													onClick={(e) => handleSubCant(e)}
+													className="border-2 border-cyan-900 rounded-xl px-1 "
+												>
+													Cargar insumo
+												</button>
+											) : (
+												<p></p>
+											)}
+										</div>
 									</div>
-								</div>
-							</span>
-						</div>
-						{input.defaultInput.map((e) => {
-							return (
-								<div className="flex flex-col sm:flex-row mb-4">
-									<h1 className="text-xl font-thin">{e.insumos} - </h1>
-									<h2 className="sm:pl-2 text-xl font-thin">
-										Cantidad: {e.cantidad}
-									</h2>
-								</div>
-							);
-						})}
-					</div>
-
-					<div>
-						<label className="flex flex-col sm:text-xl sm:font-bold pb-2">
-							{' '}
-							Imagen del producto:
-						</label>
-						<input
-							className="border-2 border-blue-800 rounded-xl"
-							id="inputFile"
-							type="file"
-							name="image"
-							onChange={(e) => handleimg(e)}
-						/>
-
-						{loading === 0 ? (
-							<div>
-								<br />
-								<img
-									src={image}
-									alt=""
-									className="border-2 border-blue-800 rounded-xl w-32 h-32 sm:w-64 sm:h-56"
-								/>
-								<br />
+								</span>
 							</div>
-						) : (
-							false
-						)}
-						{errors.img ? errors.img : false}
-						<br />
-						<div className="pt-2 pb-8 flex justify-center">
-							{input.name ? (
-								<button
-									onClick={(e) => handleSubmit(e)}
-									className=" border-2 border-blue-800 py-2 px-4 rounded-xl hover:bg-blue-800 hover:text-white font-bold"
-								>
-									Guardar cambios
-								</button>
-							) : (
-								<p className="text-red-400">
-									Debe ingresar el nombre del producto
-								</p>
-							)}
+							{input.defaultInput.map((e) => {
+								return (
+									<div className="flex flex-col sm:flex-row mb-4">
+										<h1 className="text-xl font-thin">{e.insumos} - </h1>
+										<h2 className="sm:pl-2 text-xl font-thin">
+											Cantidad: {e.cantidad}
+										</h2>
+									</div>
+								);
+							})}
 						</div>
-					</div>
-				</form>
+
+						<div>
+							<label className="flex flex-col sm:text-xl sm:font-bold pb-2 w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
+								{' '}
+								Imagen del producto:
+							</label>
+							<input
+								className="border-2 border-cyan-900 rounded-xl w-[90vw] sm:w-auto ml-2 sm:ml-0 "
+								id="inputFile"
+								type="file"
+								name="image"
+								onChange={(e) => handleimg(e)}
+							/>
+
+							{loading === 0 ? (
+								<div>
+									<br />
+									<img
+										src={image}
+										alt=""
+										className="border-2 border-cyan-900 rounded-xl w-32 h-32 sm:w-64 sm:h-56"
+									/>
+									<br />
+								</div>
+							) : (
+								false
+							)}
+							{errors.img ? errors.img : false}
+							<br />
+							<div className="pt-2 pb-8 flex justify-center">
+								{input.name ? (
+									<button
+										onClick={(e) => handleSubmit(e)}
+										className=" border-2 border-cyan-900 py-2 px-4 rounded-xl hover:bg-cyan-900 hover:text-white font-bold"
+									>
+										Guardar cambios
+									</button>
+								) : (
+									<p className="text-red-400">
+										Debe ingresar el nombre del producto
+									</p>
+								)}
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	);

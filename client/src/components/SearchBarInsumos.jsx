@@ -28,7 +28,7 @@ export default function SearchBarInsumos() {
 			<form onSubmit={(e) => handleSubmit(e)}>
 				<input
 					value={name}
-					className="border-2 border-blue-800 rounded-xl sm:w-96"
+					className="border-2 border-cyan-900 rounded-xl sm:w-96 bg-transparent"
 					type="text"
 					placeholder="   Buscar Insumo"
 					onChange={(e) => handleChange(e)}
