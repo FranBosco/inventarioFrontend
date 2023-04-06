@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProductos, deleteProducto } from '../redux/actions';
+import { getProductos } from '../redux/actions';
 import { RiEdit2Line } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import SearchBarProds from './SearchBarProds';
@@ -11,11 +11,7 @@ import { RiDeleteBin5Line } from 'react-icons/ri';
 export default function AllProdsTable() {
 	const productos = useSelector((state) => state.allProductos);
 	const dispatch = useDispatch();
-	const handleDelete = (e) => {
-		alert('Se ha eliminado el producto');
-		dispatch(deleteProducto(e.target.value));
-		window.location.reload();
-	};
+
 	const [property, setProperty] = useState('name');
 	const [order, setOrder] = useState('ASC');
 	function handleRefresh() {
@@ -116,7 +112,9 @@ export default function AllProdsTable() {
 									</button>
 								</div>
 							</th>
-							<th className="px-2 border-4 border-black sm:px-12">Editar</th>
+							<th className="px-2 border-4 border-black sm:px-12">
+								Editar/Borrar
+							</th>
 						</tr>
 					</thead>
 					<tbody>
