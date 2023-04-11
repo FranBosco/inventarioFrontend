@@ -117,7 +117,7 @@ export default function CrearInsumo() {
 					to="/home"
 					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-10 "
 				>
-					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8">
+					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-cyan-900 rounded-lg hover:bg-cyan-900 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8">
 						Volver
 					</button>
 				</Link>
@@ -133,7 +133,7 @@ export default function CrearInsumo() {
 						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label className="">Nombre del insumo: </label>
 							<input
-								className="border-2 border-blue-800 rounded-xl"
+								className="border-2 border-cyan-900 rounded-xl"
 								type="text"
 								name="name"
 								value={input.value}
@@ -144,7 +144,7 @@ export default function CrearInsumo() {
 						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Stock inicial:</label>
 							<input
-								className="border-2 border-blue-800 rounded-xl"
+								className="border-2 border-cyan-900 rounded-xl"
 								type="number"
 								name="stock"
 								id=""
@@ -155,7 +155,7 @@ export default function CrearInsumo() {
 						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Detalles del insumo:</label>
 							<input
-								className="border-2 border-blue-800 rounded-xl"
+								className="border-2 border-cyan-900 rounded-xl"
 								type="text"
 								name="details"
 								id=""
@@ -166,7 +166,7 @@ export default function CrearInsumo() {
 						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Unidad de medida (cm,lt,kg, etc.):</label>
 							<input
-								className="border-2 border-blue-800 rounded-xl"
+								className="border-2 border-cyan-900 rounded-xl"
 								type="text"
 								name="unidadDeMedida"
 								id=""
@@ -177,7 +177,7 @@ export default function CrearInsumo() {
 						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Stock minimo deseado:</label>
 							<input
-								className="border-2 border-blue-800 rounded-xl"
+								className="border-2 border-cyan-900 rounded-xl"
 								type="number"
 								name="min"
 								id=""
@@ -189,7 +189,7 @@ export default function CrearInsumo() {
 							<label>Imagen del Insumo:</label>
 
 							<input
-								className="border-2 border-blue-800 rounded-xl"
+								className="border-2 border-cyan-900 rounded-xl"
 								id="inputFile"
 								type="file"
 								name="image"
@@ -202,7 +202,7 @@ export default function CrearInsumo() {
 									<img
 										src={image}
 										alt=""
-										className="border-2 border-blue-800 rounded-xl w-32 h-32 sm:w-64 sm:h-56"
+										className="border-2 border-cyan-900 rounded-xl w-32 h-32 sm:w-64 sm:h-56"
 									/>
 									<br />
 								</div>
@@ -215,7 +215,7 @@ export default function CrearInsumo() {
 						<div className="pt-4 pb-8 flex justify-center">
 							{input.name ? (
 								<button
-									className=" border-2 border-blue-800 py-2 px-4 rounded-xl hover:bg-blue-800 hover:text-white font-bold"
+									className=" border-2 border-cyan-900 py-2 px-4 rounded-xl hover:bg-cyan-900 hover:text-white font-bold"
 									type="submit"
 									onClick={handleSubmit}
 								>
