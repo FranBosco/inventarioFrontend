@@ -13,7 +13,7 @@ export default function Landing() {
 				<FiArrowDown className="w-20 h-32 flex justify-center " />
 			</div>
 			<Link
-				to="/home"
+				to="/register"
 				className="flex text-black font-mono justify-center pt-20 "
 			>
 				<button className="flex text-black font-mono justify-center animate-pulse border-2 border-black rounded-lg py-2 px-2 hover:text-black hover:bg-cyan-900 sm:border-4 sm:py-6 sm:px-12 sm:text-2xl sm:font-bold  ">
