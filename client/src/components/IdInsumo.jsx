@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getInsumoId, deleteInsumo } from '../redux/actions';
 import { useParams, Link } from 'react-router-dom';

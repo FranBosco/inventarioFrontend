@@ -24,7 +24,7 @@ export function getInsumos(property, order) {
 	try {
 		return async function (dispatch) {
 			var info = await axios.get(
-				`http://localhost:3001/insumos?property=${property}&order=${order}`
+				`https://inventariobackend-production-3ab0.up.railway.app/insumos?property=${property}&order=${order}`
 			);
 			return dispatch({
 				type: GET_ALL_INSUMOS,
@@ -41,7 +41,7 @@ export function searchByNameI(name) {
 	return async function (dispatch) {
 		try {
 			const info = await axios.get(
-				`http://localhost:3001/insumos?name=${name}`
+				`https://inventariobackend-production-3ab0.up.railway.app/insumos?name=${name}`
 			);
 
 			return dispatch({
@@ -58,7 +58,9 @@ export function searchByNameI(name) {
 export function getInsumosHome() {
 	try {
 		return async function (dispatch) {
-			var info = await axios.get('http://localhost:3001/insumosHome');
+			var info = await axios.get(
+				'https://inventariobackend-production-3ab0.up.railway.app/insumosHome'
+			);
 			return dispatch({
 				type: GET_INSUMOS_HOME,
 				payload: info.data
@@ -71,7 +73,9 @@ export function getInsumosHome() {
 export function getInsumoId(id) {
 	try {
 		return async function (dispatch) {
-			var info = await axios.get(`http://localhost:3001/insumos/${id}`);
+			var info = await axios.get(
+				`https://inventariobackend-production-3ab0.up.railway.app/insumos/${id}`
+			);
 			return dispatch({
 				type: GET_INSUMO_BY_ID,
 				payload: info.data
@@ -84,7 +88,10 @@ export function getInsumoId(id) {
 export function createInsumo(payload) {
 	return async function (dispatch) {
 		try {
-			const info = await axios.post('http://localhost:3001/insumos', payload);
+			const info = await axios.post(
+				'https://inventariobackend-production-3ab0.up.railway.app/insumos',
+				payload
+			);
 			return dispatch({
 				type: CREATE_INS,
 				payload: info.data
@@ -107,14 +114,17 @@ export const modifyInsumo = (
 ) => {
 	return async function (dispatch) {
 		try {
-			const info = await axios.put(`http://localhost:3001/insumos/${id}`, {
-				name,
-				img,
-				details,
-				stock,
-				min,
-				unidadDeMedida
-			});
+			const info = await axios.put(
+				`https://inventariobackend-production-3ab0.up.railway.app/insumos/${id}`,
+				{
+					name,
+					img,
+					details,
+					stock,
+					min,
+					unidadDeMedida
+				}
+			);
 
 			return dispatch({
 				type: MODIF_INS,
@@ -130,7 +140,10 @@ export const modifyInsumo = (
 export function addStockInsumo(payload) {
 	try {
 		return async function (dispatch) {
-			var info = await axios.put(`http://localhost:3001/insumos/add/`, payload);
+			var info = await axios.put(
+				`https://inventariobackend-production-3ab0.up.railway.app/insumos/add/`,
+				payload
+			);
 			console.log(payload, 'payloadaddins');
 			return dispatch({
 				type: ADD_STOCK_INSUMOS,
@@ -145,7 +158,7 @@ export function getProductos(property, order) {
 	try {
 		return async function (dispatch) {
 			var info = await axios.get(
-				`http://localhost:3001/productos
+				`https://inventariobackend-production-3ab0.up.railway.app/productos
 				?property=${property}&order=${order}`
 			);
 			return dispatch({
@@ -163,7 +176,7 @@ export function searchByNameP(name) {
 	return async function (dispatch) {
 		try {
 			const info = await axios.get(
-				`http://localhost:3001/productos?name=${name}`
+				`https://inventariobackend-production-3ab0.up.railway.app/productos?name=${name}`
 			);
 
 			return dispatch({
@@ -180,7 +193,9 @@ export function searchByNameP(name) {
 export function getProdsHome() {
 	try {
 		return async function (dispatch) {
-			var info = await axios.get('http://localhost:3001/productosHome');
+			var info = await axios.get(
+				'https://inventariobackend-production-3ab0.up.railway.app/productosHome'
+			);
 			return dispatch({
 				type: GET_PRODS_HOME,
 				payload: info.data
@@ -193,7 +208,9 @@ export function getProdsHome() {
 export function getProdsById(id) {
 	try {
 		return async function (dispatch) {
-			var info = await axios.get(`http://localhost:3001/productos/${id}`);
+			var info = await axios.get(
+				`https://inventariobackend-production-3ab0.up.railway.app/productos/${id}`
+			);
 			return dispatch({
 				type: GET_PRODS_BY_ID,
 				payload: info.data
@@ -206,7 +223,10 @@ export function getProdsById(id) {
 export function createProd(payload) {
 	return async function (dispatch) {
 		try {
-			const info = await axios.post('http://localhost:3001/productos', payload);
+			const info = await axios.post(
+				'https://inventariobackend-production-3ab0.up.railway.app/productos',
+				payload
+			);
 			return dispatch({
 				type: CREATE_PROD,
 				payload: info.data
@@ -230,15 +250,18 @@ export const modifyProd = (
 ) => {
 	return async function (dispatch) {
 		try {
-			const info = await axios.put(`http://localhost:3001/productos/${id}`, {
-				name,
-				img,
-				details,
-				stock,
-				min,
-				defaultInput,
-				difference
-			});
+			const info = await axios.put(
+				`https://inventariobackend-production-3ab0.up.railway.app/productos/${id}`,
+				{
+					name,
+					img,
+					details,
+					stock,
+					min,
+					defaultInput,
+					difference
+				}
+			);
 			return dispatch({
 				type: MODIF_PROD,
 				payload: info.data
@@ -254,7 +277,10 @@ export const modifyProd = (
 export function addVenta(payload) {
 	try {
 		return async function (dispatch) {
-			var info = await axios.put(`http://localhost:3001/ventas`, payload);
+			var info = await axios.put(
+				`https://inventariobackend-production-3ab0.up.railway.app/ventas`,
+				payload
+			);
 
 			return dispatch({
 				type: ADD_VENTA,
@@ -269,7 +295,7 @@ export function addStockProducto(payload) {
 	try {
 		return async function (dispatch) {
 			var info = await axios.put(
-				`http://localhost:3001/productos/add/`,
+				`https://inventariobackend-production-3ab0.up.railway.app/productos/add/`,
 				payload
 			);
 			return dispatch({
@@ -285,7 +311,10 @@ export function addStockProducto(payload) {
 export function addProduccion(payload) {
 	try {
 		return async function (dispatch) {
-			var info = await axios.put(`http://localhost:3001/produccion`, payload);
+			var info = await axios.put(
+				`https://inventariobackend-production-3ab0.up.railway.app/produccion`,
+				payload
+			);
 			return dispatch({
 				type: ADD_PRODUCCION,
 				payload: info.data
@@ -298,7 +327,9 @@ export function addProduccion(payload) {
 export function deleteInsumo(id) {
 	return async (dispatch) => {
 		try {
-			const info = await axios.delete(`http://localhost:3001/insumos/${id}`);
+			const info = await axios.delete(
+				`https://inventariobackend-production-3ab0.up.railway.app/insumos/${id}`
+			);
 			dispatch({
 				type: DELETE_INSUMO,
 				payload: info.data
@@ -312,7 +343,9 @@ export function deleteInsumo(id) {
 export function deleteProducto(id) {
 	return async (dispatch) => {
 		try {
-			const info = await axios.delete(`http://localhost:3001/productos/${id}`);
+			const info = await axios.delete(
+				`https://inventariobackend-production-3ab0.up.railway.app/productos/${id}`
+			);
 			dispatch({
 				type: DELETE_PRODUCTO,
 				payload: info.data

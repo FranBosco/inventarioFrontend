@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getInsumos, deleteInsumo } from '../redux/actions';
+import { getInsumos } from '../redux/actions';
 import { RiEdit2Line } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { FaArrowDown } from 'react-icons/fa';
@@ -111,7 +111,9 @@ export default function AllProdsTable() {
 									</button>
 								</div>
 							</th>
-							<th className="px-2 border-4 border-black sm:px-12">Editar</th>
+							<th className="px-2 border-4 border-black sm:px-12">
+								Editar/Borrar
+							</th>
 						</tr>
 					</thead>
 					<tbody>

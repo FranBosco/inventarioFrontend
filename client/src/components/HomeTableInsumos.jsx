@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getInsumosHome, deleteInsumo } from '../redux/actions';
+import { getInsumosHome } from '../redux/actions';
 import { Link } from 'react-router-dom';
 import { RiEdit2Line } from 'react-icons/ri';
 import { RiDeleteBin5Line } from 'react-icons/ri';
@@ -9,10 +9,6 @@ export default function HomeTableInsumos() {
 	const homeInsumos = useSelector((state) => state.insumosHome);
 	const dispatch = useDispatch();
 
-	const handleDelete = (e) => {
-		alert(e.target.value);
-		dispatch(deleteInsumo(e.target.value));
-	};
 	useEffect(() => {
 		dispatch(getInsumosHome());
 	}, [dispatch]);
@@ -52,14 +48,6 @@ export default function HomeTableInsumos() {
 										<RiEdit2Line />
 										<RiDeleteBin5Line className="text-red-800 font-bold ml-3" />
 									</Link>
-									{/* <div>
-										<button
-											className="text-red-800 font-bold ml-3"
-											value={i.id}
-											onClick={(e) => handleDelete(e)}
-										>
-										</button>
-									</div> */}
 								</td>
 							</tr>
 						);
