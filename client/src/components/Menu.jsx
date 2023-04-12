@@ -1,19 +1,19 @@
 import { useState } from 'react';
 
-import { FaUserAlt } from 'react-icons/fa'
+import { FaUserAlt } from 'react-icons/fa';
 import { useAuth } from '../context/Context';
 import { useHistory } from 'react-router-dom';
 
 export default function NavBar() {
 	const [navbar, setNavbar] = useState(false);
-	const {user, logout, loading} = useAuth()
-const navigate = useHistory()
+	const { user, logout, loading } = useAuth();
+	const navigate = useHistory();
 
-const handleLogout = async() => {
-	await logout()
-	navigate.push("/login")
-}
-if(loading) return <h1>loading...</h1>
+	const handleLogout = async () => {
+		await logout();
+		navigate.push('/login');
+	};
+	if (loading) return <h1>loading...</h1>;
 
 	return (
 		<nav className="w-full  bg-cyan-900 shadow-xl shadow-gray-900 fixed z-50  opacity-90 text-white">
@@ -87,11 +87,9 @@ if(loading) return <h1>loading...</h1>
 								<a href="/productos">Productos</a>
 							</li>
 							<li>
-							<div> 
-							<h1>Welcome {user.email}</h1>
-							<button onClick={handleLogout}>
-									Logout
-								</button>
+								<div>
+									<h1>Hola! {user.email}</h1>
+									<button onClick={handleLogout}>Logout</button>
 								</div>
 							</li>
 						</ul>
