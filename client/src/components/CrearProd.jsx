@@ -164,7 +164,7 @@ export default function CrearProd() {
 					to="/home"
 					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-10 "
 				>
-					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8">
+					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-cyan-900 rounded-lg hover:bg-cyan-900 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8">
 						Volver
 					</button>
 				</Link>
@@ -180,7 +180,7 @@ export default function CrearProd() {
 						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label className="">Nombre del producto: </label>
 							<input
-								className="border-2 border-blue-800 rounded-xl "
+								className="border-2 border-cyan-900 rounded-xl "
 								type="text"
 								name="name"
 								id=""
@@ -191,7 +191,7 @@ export default function CrearProd() {
 						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Stock inicial:</label>
 							<input
-								className="border-2 border-blue-800 rounded-xl"
+								className="border-2 border-cyan-900 rounded-xl"
 								type="number"
 								name="stock"
 								id=""
@@ -202,7 +202,7 @@ export default function CrearProd() {
 						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Detalles del producto:</label>
 							<input
-								className="border-2 border-blue-800 rounded-xl"
+								className="border-2 border-cyan-900 rounded-xl"
 								type="text"
 								name="details"
 								id=""
@@ -213,7 +213,7 @@ export default function CrearProd() {
 						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Stock minimo deseado:</label>
 							<input
-								className="border-2 border-blue-800 rounded-xl"
+								className="border-2 border-cyan-900 rounded-xl"
 								type="number"
 								name="min"
 								id=""
@@ -225,7 +225,7 @@ export default function CrearProd() {
 						<div className="flex flex-col sm:text-xl sm:font-bold w-[90vw] sm:w-auto ml-2 sm:ml-0 ">
 							<label>Insumos utilizados:</label>
 							<select
-								className="border-2 border-blue-800 rounded-xl"
+								className="border-2 border-cyan-900 rounded-xl"
 								onChange={handleSelect}
 								value={valueIns}
 							>
@@ -251,7 +251,7 @@ export default function CrearProd() {
 											{valueIns !== '' ? (
 												<button
 													onClick={(e) => handleSubCant(e)}
-													className="border-2 border-blue-800 rounded-xl px-1 "
+													className="border-2 border-cyan-900 rounded-xl px-1 "
 												>
 													Cargar insumo
 												</button>
@@ -280,7 +280,7 @@ export default function CrearProd() {
 								Imagen del producto:
 							</label>
 							<input
-								className="border-2 border-blue-800 rounded-xl w-[90vw] sm:w-auto ml-2 sm:ml-0 "
+								className="border-2 border-cyan-900 rounded-xl w-[90vw] sm:w-auto ml-2 sm:ml-0 "
 								id="inputFile"
 								type="file"
 								name="image"
@@ -293,7 +293,7 @@ export default function CrearProd() {
 									<img
 										src={image}
 										alt=""
-										className="border-2 border-blue-800 rounded-xl w-32 h-32 sm:w-64 sm:h-56"
+										className="border-2 border-cyan-900 rounded-xl w-32 h-32 sm:w-64 sm:h-56"
 									/>
 									<br />
 								</div>
@@ -306,7 +306,7 @@ export default function CrearProd() {
 								{input.name ? (
 									<button
 										onClick={(e) => handleSubmit(e)}
-										className=" border-2 border-blue-800 py-2 px-4 rounded-xl hover:bg-blue-800 hover:text-white font-bold"
+										className=" border-2 border-cyan-900 py-2 px-4 rounded-xl hover:bg-cyan-900 hover:text-white font-bold"
 									>
 										Guardar cambios
 									</button>

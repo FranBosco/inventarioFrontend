@@ -83,7 +83,7 @@ export default function AllInsTable() {
 					<SearchBarProds className="" />
 					<button
 						onClick={handleRefresh}
-						className=" border-2 border-blue-800 mt-2 rounded-xl hover:bg-blue-800 hover:text-white sm:w-48 	"
+						className=" border-2 border-cyan-900 mt-2 rounded-xl hover:bg-cyan-900 hover:text-white sm:w-48 	"
 					>
 						Volver a cargar
 					</button>
@@ -171,7 +171,7 @@ export default function AllInsTable() {
 					<div className="flex justify-center pt-4">
 						<button
 							onClick={handleSubmit}
-							className="text-black font-mono border-2 rounded-xl border-blue-800 py-2 px-4 hover:bg-blue-800 hover:text-white"
+							className="text-black font-mono border-2 rounded-xl border-cyan-900 py-2 px-4 hover:bg-cyan-900 hover:text-white"
 						>
 							Guardar
 						</button>

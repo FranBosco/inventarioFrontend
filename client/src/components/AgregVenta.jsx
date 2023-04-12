@@ -89,7 +89,7 @@ export default function AgregVenta() {
 					to="/home"
 					className="flex justify-start pt-2 pl-2 pb-2 sm:pt-10 sm:pl-8"
 				>
-					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-blue-800 rounded-lg hover:bg-blue-800 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8">
+					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-cyan-900 rounded-lg hover:bg-cyan-900 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8">
 						Volver
 					</button>
 				</Link>
@@ -104,7 +104,7 @@ export default function AgregVenta() {
 					<SearchBarProds className="" />
 					<button
 						onClick={handleRefresh}
-						className=" border-2 border-blue-800 mt-2 rounded-xl hover:bg-blue-800 hover:text-white sm:w-48 	"
+						className=" border-2 border-cyan-900 mt-2 rounded-xl hover:bg-cyan-900 hover:text-white sm:w-48 	"
 					>
 						Volver a cargar
 					</button>
@@ -192,7 +192,7 @@ export default function AgregVenta() {
 					<div className="flex justify-center pt-4">
 						<button
 							onClick={handleSubmit}
-							className="text-black font-mono border-2 rounded-xl border-blue-800 py-2 px-4 hover:bg-blue-800 hover:text-white fixed"
+							className="text-black font-mono border-2 rounded-xl border-cyan-900 py-2 px-4 hover:bg-cyan-900 hover:text-white fixed"
 						>
 							Guardar
 						</button>
