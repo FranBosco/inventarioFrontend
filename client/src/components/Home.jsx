@@ -2,7 +2,7 @@ import React from 'react';
 import Menu from './Menu';
 import HomeTableInsumos from './HomeTableInsumos';
 import HomeTableProds from './HomeTableProds';
-import SideBar from './SideBar';
+
 import { Link } from 'react-router-dom';
 import '../styles.css';
 
@@ -15,7 +15,6 @@ export default function Home() {
 
 			<div className="max-w-full  sm:ml-80  sm:mt-12 	  ">
 				<h1 className="text-black text-xl font-bold pt-20 sm:flex sm:justify-center sm:text-6xl sm:font-bold  sm:pt-10  title">
-					{' '}
 					Gestor de inventarios
 				</h1>
 				<div className=" ">
