@@ -7,6 +7,8 @@ import { BrowserRouter } from 'react-router-dom';
 import store from './redux/store';
 import { Provider } from 'react-redux';
 
+axios.defaults.baseURL = 'https://inventariobackend-vle5-dev.fl0.io/'
+
 ReactDOM.render(
 	<Provider store={store}>
 		<BrowserRouter>
