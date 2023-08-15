@@ -2,7 +2,6 @@ import React from 'react';
 import Menu from './Menu';
 import HomeTableInsumos from './HomeTableInsumos';
 import HomeTableProds from './HomeTableProds';
-
 import { Link } from 'react-router-dom';
 import '../styles.css';
 
