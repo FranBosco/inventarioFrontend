@@ -14,6 +14,7 @@ export default function AllProdsTable() {
 
 	const [property, setProperty] = useState('name');
 	const [order, setOrder] = useState('ASC');
+
 	function handleRefresh() {
 		setProperty('name');
 		setOrder('ASC');
