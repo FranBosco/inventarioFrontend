@@ -21,7 +21,7 @@ export default function AllInsumos() {
 						to="/home"
 						className="flex justify-start pt-6 pl-2 sm:pt-10 sm:pl-8"
 					>
-						<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-cyan-900 rounded-lg hover:bg-cyan-900 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-8">
+						<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-cyan-900 rounded-lg hover:bg-cyan-900 sm:py-2 sm:px-8 sm:text-xl mt-20 sm:mt-20">
 							Volver
 						</button>
 					</Link>
