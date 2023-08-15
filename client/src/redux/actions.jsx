@@ -24,7 +24,7 @@ export function getInsumos(property, order) {
 	try {
 		return async function (dispatch) {
 			var info = await axios.get(
-				`https://inventariobackend-production-3ab0.up.railway.app/insumos?property=${property}&order=${order}`
+				`insumos?property=${property}&order=${order}`
 			);
 			return dispatch({
 				type: GET_ALL_INSUMOS,
@@ -41,7 +41,7 @@ export function searchByNameI(name) {
 	return async function (dispatch) {
 		try {
 			const info = await axios.get(
-				`https://inventariobackend-production-3ab0.up.railway.app/insumos?name=${name}`
+				`insumos?name=${name}`
 			);
 
 			return dispatch({
@@ -59,7 +59,7 @@ export function getInsumosHome() {
 	try {
 		return async function (dispatch) {
 			var info = await axios.get(
-				'https://inventariobackend-production-3ab0.up.railway.app/insumosHome'
+				'insumosHome'
 			);
 			return dispatch({
 				type: GET_INSUMOS_HOME,
@@ -74,7 +74,7 @@ export function getInsumoId(id) {
 	try {
 		return async function (dispatch) {
 			var info = await axios.get(
-				`https://inventariobackend-production-3ab0.up.railway.app/insumos/${id}`
+				`insumos/${id}`
 			);
 			return dispatch({
 				type: GET_INSUMO_BY_ID,
@@ -89,7 +89,7 @@ export function createInsumo(payload) {
 	return async function (dispatch) {
 		try {
 			const info = await axios.post(
-				'https://inventariobackend-production-3ab0.up.railway.app/insumos',
+				'insumos',
 				payload
 			);
 			return dispatch({
@@ -115,7 +115,7 @@ export const modifyInsumo = (
 	return async function (dispatch) {
 		try {
 			const info = await axios.put(
-				`https://inventariobackend-production-3ab0.up.railway.app/insumos/${id}`,
+				`insumos/${id}`,
 				{
 					name,
 					img,
@@ -141,7 +141,7 @@ export function addStockInsumo(payload) {
 	try {
 		return async function (dispatch) {
 			var info = await axios.put(
-				`https://inventariobackend-production-3ab0.up.railway.app/insumos/add/`,
+				`insumos/add/`,
 				payload
 			);
 			console.log(payload, 'payloadaddins');
@@ -158,7 +158,7 @@ export function getProductos(property, order) {
 	try {
 		return async function (dispatch) {
 			var info = await axios.get(
-				`https://inventariobackend-production-3ab0.up.railway.app/productos
+				`productos
 				?property=${property}&order=${order}`
 			);
 			return dispatch({
@@ -176,7 +176,7 @@ export function searchByNameP(name) {
 	return async function (dispatch) {
 		try {
 			const info = await axios.get(
-				`https://inventariobackend-production-3ab0.up.railway.app/productos?name=${name}`
+				`productos?name=${name}`
 			);
 
 			return dispatch({
@@ -194,7 +194,7 @@ export function getProdsHome() {
 	try {
 		return async function (dispatch) {
 			var info = await axios.get(
-				'https://inventariobackend-production-3ab0.up.railway.app/productosHome'
+				'productosHome'
 			);
 			return dispatch({
 				type: GET_PRODS_HOME,
@@ -209,7 +209,7 @@ export function getProdsById(id) {
 	try {
 		return async function (dispatch) {
 			var info = await axios.get(
-				`https://inventariobackend-production-3ab0.up.railway.app/productos/${id}`
+				`productos/${id}`
 			);
 			return dispatch({
 				type: GET_PRODS_BY_ID,
@@ -224,7 +224,7 @@ export function createProd(payload) {
 	return async function (dispatch) {
 		try {
 			const info = await axios.post(
-				'https://inventariobackend-production-3ab0.up.railway.app/productos',
+				'productos',
 				payload
 			);
 			return dispatch({
@@ -251,7 +251,7 @@ export const modifyProd = (
 	return async function (dispatch) {
 		try {
 			const info = await axios.put(
-				`https://inventariobackend-production-3ab0.up.railway.app/productos/${id}`,
+				`productos/${id}`,
 				{
 					name,
 					img,
@@ -278,7 +278,7 @@ export function addVenta(payload) {
 	try {
 		return async function (dispatch) {
 			var info = await axios.put(
-				`https://inventariobackend-production-3ab0.up.railway.app/ventas`,
+				`ventas`,
 				payload
 			);
 
@@ -295,7 +295,7 @@ export function addStockProducto(payload) {
 	try {
 		return async function (dispatch) {
 			var info = await axios.put(
-				`https://inventariobackend-production-3ab0.up.railway.app/productos/add/`,
+				`productos/add/`,
 				payload
 			);
 			return dispatch({
@@ -312,7 +312,7 @@ export function addProduccion(payload) {
 	try {
 		return async function (dispatch) {
 			var info = await axios.put(
-				`https://inventariobackend-production-3ab0.up.railway.app/produccion`,
+				`produccion`,
 				payload
 			);
 			return dispatch({
@@ -328,7 +328,7 @@ export function deleteInsumo(id) {
 	return async (dispatch) => {
 		try {
 			const info = await axios.delete(
-				`https://inventariobackend-production-3ab0.up.railway.app/insumos/${id}`
+				`insumos/${id}`
 			);
 			dispatch({
 				type: DELETE_INSUMO,
@@ -344,7 +344,7 @@ export function deleteProducto(id) {
 	return async (dispatch) => {
 		try {
 			const info = await axios.delete(
-				`https://inventariobackend-production-3ab0.up.railway.app/productos/${id}`
+				`productos/${id}`
 			);
 			dispatch({
 				type: DELETE_PRODUCTO,
