@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import store from './redux/store';
 import { Provider } from 'react-redux';
-
+import axios from 'axios'
 axios.defaults.baseURL = 'https://inventariobackend-vle5-dev.fl0.io/'
 
 ReactDOM.render(
