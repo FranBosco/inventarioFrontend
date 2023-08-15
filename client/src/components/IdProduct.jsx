@@ -38,7 +38,7 @@ export default function ProdById() {
 			</div>
 			<div className="flex flex-col pt-16 sm:pl-10 justify-center">
 				<Link to="/home" className="flex justify-start pt-2 pl-2">
-					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-cyan-900 rounded-lg hover:bg-cyan-900 sm:py-2 sm:px-8 sm:text-xl">
+					<button className="text-black font-mono hover:text-white pr-2 pl-2 border-2 border-cyan-900 rounded-lg hover:bg-cyan-900 sm:py-2 sm:px-8 sm:text-xl sm:mt-20">
 						Volver
 					</button>
 				</Link>
