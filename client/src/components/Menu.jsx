@@ -16,7 +16,7 @@ export default function NavBar() {
 	if (loading) return <h1>loading...</h1>;
 
 	return (
-		<nav className="w-full  bg-cyan-900 shadow-xl shadow-gray-900  z-50  opacity-90 text-white">
+		<nav className="w-full  bg-cyan-900 shadow-xl shadow-gray-900 fixed z-50  opacity-90 text-white">
 			<div className="sm:flex sm:justify-center px-4 mx-auto lg:max-w-full md:items-center md:flex sm:mb-4  ">
 				<div>
 					<div className="flex justify-start sm:items-center  sm:justify-around py-3 md:py-5 md:block">
